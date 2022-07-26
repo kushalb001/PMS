@@ -1,0 +1,45 @@
+{% extends 'base/layout.html' %}
+
+{% block center %}
+<main class="update-account layout">
+  <div class="container">
+    <div class="layout__box">
+     
+      <div class="layout__body">
+        <div class="layout__boxTitle">
+          
+         
+          <h3>Enter the details</h3>
+        </div>
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          {% for field in form %}
+          <div class="form__group">
+            <label for="profile_pic">{{field.label}}</label>
+            {{field}}
+          </div>
+          {% endfor %}
+
+
+          <div class="form__action">
+            <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
+            <button class="btn btn--main" type="submit">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+{% endblock center %}
+
+{% block top-bar %}
+
+<div id="nav-links">
+  <a href="{% url 'home' %}">HOME</a>
+  <a href="{% url 'billing' ck %}">SHOP</a>
+<a href="{% url 'cart' ck %}">CART</a>
+</div>
+  
+{% endblock top-bar %}

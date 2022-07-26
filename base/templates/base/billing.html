@@ -1,0 +1,57 @@
+{% extends "base/layout.html" %}
+
+{% block side-bar %}
+<div class="categories">
+    <div class="categories__header">
+      <h2>CATEGORY</h2>
+    </div>
+    <ul class="categories__list">
+      {% for category in categories %}
+      <li>
+        <a href="{% url 'billing' ck %}?q={{category.name}}">{{category.name}}<span>{{category.medicine_set.all.count}}</span></a>
+      </li>
+      {% endfor %}
+    </ul>
+   
+  </div>
+{% endblock side-bar %}
+
+{% block center %}
+<div style="display: flex;
+margin-top: 3%;
+flex-direction: row;
+gap: 10px;
+flex-wrap: wrap;">
+{% for medicine in medicines %}
+<div class="card" style="width: 18rem;">
+  <img src="{{medicine.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{medicine.name}}</h5>
+    <h5 class="card-title">&#8377;{{medicine.price}}</h5>
+    <p class="card-text">{{medicine.description}}</p>
+    <a href="{% url 'add-to-cart' medicine.id ck %}" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+
+  
+
+{% endblock center %}
+
+
+{% block top-bar %}
+<form class="header__search" method="GET" action="{% url 'billing' ck %}">
+  <label>
+    
+    <input name="q" placeholder="Search" />
+  </label>
+</form>
+<div id="nav-links">
+  <a href="{% url 'home' %}" style="color: white;">HOME</a>
+<a href="{% url 'cart' ck %}"style="color: white;">CART</a>
+</div>
+  
+{% endblock top-bar %}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>CART</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/cart.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="top-bar">
+        <img id="logo-home" src="{% static 'images/drugstore.png' %}">
+        <div id="nav-links">
+            <a href="{% url 'home' %}"style="color: white;">HOME</a>
+          <a href="{% url 'billing' ck %}"style="color: white;">SHOP</a>
+          </div>
+        
+    </div>
+
+    <div style="justify-content: center" class="Header">
+        <h3 class="Heading">CART</h3>
+    </div>
+    
+    {% for order_item in object.items.all %}
+    <div class="Cart-Items">
+          <div class="image-box">
+              <img style="border-radius: 10%;"  src="{{order_item.item.image.url}}" height="50vh" />
+          </div>
+          <div class="about">
+              <h1 class="title" style="line-height: 23px;">{{ order_item.item.name}}</h1>
+ 
+    
+          </div>
+          <div class="counter">
+              <a style="text-decoration: none" href="{% url 'add-to-cart' order_item.item.id ck %}"><div class="btn">+</div></a>
+              <div class="count">{{order_item.quantity}}</div>
+              <a style="text-decoration: none" href="{% url 'remove_single_item_from_cart' order_item.item.id ck %}"><div class="btn">-</div></a>
+          </div>
+          <div class="prices">
+              <div class="amount"></div>&#8377;{{order_item.get_final_price}}</div>
+              
+              <a href="{% url 'remove-from-cart' order_item.item.id ck %}"><div class="remove"><u>Remove</u></div></a>
+          </div>
+    
+  {%endfor %}
+
+  <hr> 
+  <di class="checkout">
+  <div class="total">
+      <div>
+          <div class="Subtotal">Sub-Total</div>
+          
+      </div>
+      <div class="total-amount">&#8377;{{ object.get_total }}</div>
+  </div>
+  
+  <a href="{% url 'checkout' ck ali %}"><button class="button">Checkout</button></div></a>
+</div>
+</body>
+</html>

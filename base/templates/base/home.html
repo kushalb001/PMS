@@ -1,0 +1,24 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/home_style.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    
+    
+    <div class="box"><a href="{% url 'register' %}">REGISTER CUSTOMER</a></div>
+    <div class="box"><a href="{% url 'billing1' %}">START BILLING</a></div>
+<div class="box"><a href="{% url 'customer_orders' %}">CUSTOMER ORDERS</a></div>
+    <div class="box"><a href="{% url 'myorders' %}">MY ORDERS</a></div>
+    <div class="box"><a href="{% url 'covid_data'%}?c=on&f=on&b=on&co=on&z=">COVID DATA</a></div>
+   
+    <div class="box"><a href="{% url 'logout' %}">LOGOUT</a></div>
+    
+</body>
+</html>
+

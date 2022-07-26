@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILLING</title>
+    <link rel="stylesheet" href="{% static 'styles/clogin_style.css' %}" />
+
+</head>
+<body>
+    <div class="full">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <h1> Enter the Phone number</h1>
+            <div class="inputs">
+                <input type="text" name="phno">
+                
+            </div>
+            <div class="sign-in-button">    
+                <button class="signin" type="submit">Continue billing</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="{% static 'js/clogin_script.js' %}"></script>
+</html>

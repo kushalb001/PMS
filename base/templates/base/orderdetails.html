@@ -1,0 +1,34 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/orderdetails.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top-bar">
+        <img id="logo-home" src="{% static 'images/drugstore.png' %}">
+        <div id="nav-links">
+            <a href="{% url 'home' %}">HOME</a>
+          
+          </div>
+        
+    </div>
+    <div id='middle'>
+    <div id='pres'>
+        <h3>PRESCRIPTIONS</h3>
+        <ol>
+        {% for p in ps %}
+        <li>
+        <a href="{{p.image.url}}" target="_blank" rel="noopener noreferrer">View</a>
+    </li>
+          
+        {% endfor %}
+    </ol>
+    </div>
+    <a href="{% url 'display_bill' id %}" target="_blank"><h3>VIEW BILL</h3></a>
+</div>
+</body>
+</html>
