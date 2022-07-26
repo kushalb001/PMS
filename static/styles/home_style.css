@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    src: url(sansation_light.woff);
+  }
+  div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+.box
+{
+    height: 9vh;
+    width: 15vw;
+    background-color: #47949b;
+    margin:5%;
+    text-align: center;
+    padding-top: 5vh; 
+    border-radius: 20px;
+    
+}
+.box a{
+    font-size: large;
+    text-decoration: solid;
+    color: aliceblue;
+}
+
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(/static/images/bg.jpg);
+    background-size: cover;
+}

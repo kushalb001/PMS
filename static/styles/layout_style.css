@@ -1,0 +1,204 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.middle
+{
+    display: grid;
+    grid-template-columns: .5fr 3fr;
+    gap: 30px;
+    background-color: #FFF8F3;
+
+}
+
+.side-bar
+{
+    background-color: #FFF8F3;
+    height: 100vh;
+    border-radius: 5px;
+    padding-top: 30px;
+    
+   
+}
+
+.top-bar
+{
+    background-color: #0c0205;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+    gap:30px;
+    height: 10vh;
+    
+}
+
+
+
+#logo-home {
+    position: absolute;
+    height: 10vh;
+    width: 6vw;
+    left: 3vw;
+    
+}
+
+
+.header__search
+{
+    margin-top: 13px;
+    
+}
+input
+{
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.categories__header {
+    margin-bottom: 2rem;
+    color: blue;
+    text-align: center;
+    position: relative;
+    left: 15px;
+  }
+.categories__list {
+  
+  list-style: none;
+  }
+
+
+  .categories__list li a {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    color: blue;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    position: relative;
+    right: 5px;
+    text-decoration: solid;
+  }
+
+  .categories__list li a.active,
+.categories__list li a:hover {
+  color: green;
+}
+  
+#nav-links
+{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: larger;
+   
+}
+#nav-links a
+{
+    text-decoration: solid;
+}
+
+.update-account.layout .layout__box {
+    max-width: 68rem;
+  }
+  .layout__boxTitle
+  {
+      text-align: center;
+  }
+  
+  .layout__boxTitle h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: blue;
+    
+    
+    
+  }
+  .layout__body
+  {
+      position: relative;
+      right: 10%;
+      margin-top: 40px;
+  }
+  .form__group {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .form__split {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .form__group label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form__group input,
+  .form__group textarea,
+  .form__group select {
+    background: transparent;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 3px;
+    width: 80%;
+    color: black;
+    font-weight: 100;
+    outline: none;
+  }
+  
+  .form__group input:focus,
+  .form__group textarea:focus { 
+    border-color: black;
+  }
+  
+  .form__group textarea {
+    background: transparent;
+    height: 5rem;
+    resize: horizontal; 
+    max-width:200px; 
+    min-width:200px;
+  }
+  
+  .form__group select {
+    color: black;
+    font-weight: 400;
+  }
+  
+  .form__group select option {
+    background-color: white;
+    color: black;
+    padding: 0 10rem;
+  }
+  
+  .form__action {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .form__hide {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .form__avatar label {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .form__avatar label:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,39 @@
+.top-bar
+{
+    background-color: #A3E4DB;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+    gap:30px;
+    height: 10vh;
+    
+}
+#logo-home {
+    position: relative;
+    height: 10vh;
+    width: 6vw;
+    right: 45vw;
+    
+}
+#nav-links
+{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: larger;
+   
+}
+#nav-links a
+{
+    text-decoration: solid;
+}
+
+#middle
+{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
