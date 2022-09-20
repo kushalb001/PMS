@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3jh=yg6!og!cq&!d2!!yf#ffd4@u0%o1d8r*klgm1c#2)t(_!y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['15.206.159.251']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'PMS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PMS_DB',
-        'USER':'danish',
-        'PASSWORD':'Danish@66950',
-        'HOST':'localhost',
+        'NAME': 'PMS',
+        'USER':'admin',
+        'PASSWORD':'django7279',
+        'HOST':'database-1.ca36zvtz76fs.ap-south-1.rds.amazonaws.com',
         'PORT':'3306',
     }
 }
